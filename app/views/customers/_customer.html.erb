@@ -1,0 +1,52 @@
+<div class="card mb-4">
+  <div class="card-content">
+    <div class="media">
+      <% if customer.image.attached? %>
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <%= image_tag customer.image, class: "is-rounded" %>
+          </figure>
+        </div>
+      <% end %>
+      <div class="media-content">
+        <p class="title is-4"><%= customer.full_name %></p>
+        <p class="subtitle is-6">
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-phone"></i>
+            </span>
+            <span><%= customer.phone_number %></span>
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="content">
+      <% if customer.email_address.present? %>
+        <p>
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span><%= customer.email_address %></span>
+          </span>
+        </p>
+      <% else %>
+        <p class="has-text-danger">
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-exclamation-triangle"></i>
+            </span>
+            <span>Email missing</span>
+          </span>
+        </p>
+      <% end %>
+
+      <% if customer.notes.present? %>
+        <div class="notification is-light mt-3">
+          <%= customer.notes %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
