@@ -64,3 +64,5 @@ end
 
 gem "activeadmin", "~> 3.3"
 gem "devise", "~> 4.9"
+
+gem "jsbundling-rails", "~> 1.3"

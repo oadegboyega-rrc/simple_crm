@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@activeadmin/activeadmin": "^3.3.0",
+    "bulma": "^1.0.4"
+  }
+}
